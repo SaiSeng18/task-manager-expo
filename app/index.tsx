@@ -5,6 +5,7 @@ import { Header } from "@/components/home-page/Header";
 import { CurrentTask } from "@/components/home-page/CurrentTask";
 import { PreviewTask } from "@/components/home-page/PreviewTask";
 import { CommunityBlog } from "@/components/home-page/CommunityBlog";
+import { Statistic } from "@/components/home-page/Statistic";
 
 export default function Page() {
 	return (
@@ -22,6 +23,8 @@ export default function Page() {
 				<PreviewTask />
 
 				<CommunityBlog />
+
+				<Statistic />
 
 				<Link href="/tasks">Tasks</Link>
 			</View>

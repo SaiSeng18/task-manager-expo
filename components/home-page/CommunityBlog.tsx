@@ -1,5 +1,7 @@
 import { CARD_CONTAINER, COLORS, SPACING } from "@/constants/theme";
+import { BlurView } from "expo-blur";
 import { Pressable, StyleSheet, Text, View } from "react-native";
+import { Image as ExImage } from "expo-image";
 import FeIcon from "react-native-vector-icons/Feather";
 import FaIcon from "react-native-vector-icons/FontAwesome";
 
@@ -64,10 +66,107 @@ export const CommunityBlog = () => {
 			<View
 				style={{
 					width: "100%",
-					height: 200,
+					height: 250,
 					backgroundColor: COLORS.gray,
-					borderRadius: 30,
-				}}></View>
+					borderTopLeftRadius: 40,
+					borderTopRightRadius: 40,
+					borderBottomLeftRadius: 40,
+					position: "relative",
+					overflow: "hidden",
+				}}>
+				<ExImage
+					style={[StyleSheet.absoluteFillObject]}
+					source={
+						"https://i.pinimg.com/564x/a5/e1/c3/a5e1c31c327694f86c8a1f33fc3ff732.jpg"
+					}
+				/>
+
+				{/* Link */}
+				<View
+					style={{
+						position: "absolute",
+						top: 20,
+						left: 20,
+						padding: 8,
+						borderRadius: 15,
+						backgroundColor: COLORS.light,
+					}}>
+					<Text style={{ color: COLORS.dark }}>www.example.com</Text>
+				</View>
+
+				{/* Bottom Tabs */}
+				<View
+					style={{
+						width: "100%",
+						position: "absolute",
+						bottom: 0,
+						padding: 12,
+						flexDirection: "row",
+						justifyContent: "space-between",
+						alignItems: "center",
+					}}>
+					<BlurView intensity={120} style={styles.blurContainer}>
+						{/* <View
+							style={{
+								height: 75,
+								width: 75,
+								borderRadius: 75 / 2,
+								backgroundColor: COLORS.light,
+							}}></View> */}
+						<FeIcon name="eye" size={20} color={COLORS.light} />
+						<Text style={{ fontSize: 20, color: COLORS.light }}>1.5k</Text>
+					</BlurView>
+
+					<View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
+						<Text style={{ textAlign: "right", color: COLORS.light }}>
+							Liked {"\n"} by
+						</Text>
+						<BlurView
+							intensity={120}
+							style={{
+								flexDirection: "row",
+								padding: 4,
+								gap: 4,
+								borderRadius: 50,
+								justifyContent: "center",
+								alignItems: "center",
+								overflow: "hidden",
+							}}>
+							<View
+								style={{
+									height: 40,
+									aspectRatio: 1,
+									backgroundColor: COLORS.gray,
+									borderRadius: 20,
+								}}></View>
+
+							<View
+								style={{
+									height: 40,
+									aspectRatio: 1,
+									backgroundColor: COLORS.gray,
+									borderRadius: 20,
+								}}></View>
+
+							<View
+								style={{
+									height: 40,
+									aspectRatio: 1,
+									backgroundColor: COLORS.gray,
+									borderRadius: 20,
+								}}></View>
+
+							<View
+								style={{
+									height: 40,
+									aspectRatio: 1,
+									backgroundColor: COLORS.gray,
+									borderRadius: 20,
+								}}></View>
+						</BlurView>
+					</View>
+				</View>
+			</View>
 		</View>
 	);
 };
@@ -84,5 +183,14 @@ const styles = StyleSheet.create({
 		justifyContent: "center",
 		alignItems: "center",
 		borderRadius: 45 / 2,
+	},
+	blurContainer: {
+		height: 75,
+		width: 75,
+		borderRadius: 75 / 2,
+		textAlign: "center",
+		justifyContent: "center",
+		alignItems: "center",
+		overflow: "hidden",
 	},
 });
