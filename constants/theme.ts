@@ -5,6 +5,7 @@ const COLORS = {
 	light: "#ffffff",
 	gray: "#eaeaea",
 	lime: "#cfe9bf",
+	lightYellow: "#ffeba8",
 };
 
 const SPACING = {

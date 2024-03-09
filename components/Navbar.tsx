@@ -2,17 +2,16 @@ import { COLORS } from "@/constants/theme";
 import { router, usePathname } from "expo-router";
 
 import { Pressable, StyleSheet, Text, View } from "react-native";
+import { Icon } from "@/constants/icons";
 
 export const Navbar = () => {
 	const pathname = usePathname();
-	router;
-	console.log(pathname);
 
 	const links = [
-		{ href: "/", text: "Home" },
-		{ href: "/tasks", text: "Tasks" },
-		{ href: "/", text: "Setting" },
-		{ href: "/", text: "Profile" },
+		{ href: "/", text: "Home", icons: null },
+		{ href: "/tasks", text: "Tasks", icons: "logo" },
+		{ href: "/setting", text: "Setting", icons: null },
+		{ href: "/profile", text: "Profile", icons: null },
 	];
 
 	return (
@@ -27,13 +26,21 @@ export const Navbar = () => {
 							backgroundColor: pathname === link.href ? COLORS.light : COLORS.dark,
 						},
 					]}>
-					<Text
-						style={{
-							color: pathname === link.href ? COLORS.dark : COLORS.light,
-							fontSize: 16,
-						}}>
-						{link.text}
-					</Text>
+					{link.icons ? (
+						<Icon
+							name="logo"
+							size={20}
+							color={pathname === link.href ? COLORS.dark : COLORS.light}
+						/>
+					) : (
+						<Text
+							style={{
+								color: pathname === link.href ? COLORS.dark : COLORS.light,
+								fontSize: 16,
+							}}>
+							{link.text}
+						</Text>
+					)}
 				</Pressable>
 			))}
 		</View>
