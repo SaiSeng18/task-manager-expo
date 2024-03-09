@@ -105,7 +105,7 @@ export const CommunityBlog = () => {
 						justifyContent: "space-between",
 						alignItems: "center",
 					}}>
-					<BlurView intensity={120} style={styles.blurContainer}>
+					<BlurView intensity={50} style={styles.blurContainer}>
 						{/* <View
 							style={{
 								height: 75,
@@ -122,7 +122,7 @@ export const CommunityBlog = () => {
 							Liked {"\n"} by
 						</Text>
 						<BlurView
-							intensity={120}
+							intensity={50}
 							style={{
 								flexDirection: "row",
 								padding: 4,
@@ -134,34 +134,34 @@ export const CommunityBlog = () => {
 							}}>
 							<View
 								style={{
-									height: 40,
+									height: 35,
 									aspectRatio: 1,
 									backgroundColor: COLORS.gray,
-									borderRadius: 20,
+									borderRadius: 15,
 								}}></View>
 
 							<View
 								style={{
-									height: 40,
+									height: 35,
 									aspectRatio: 1,
 									backgroundColor: COLORS.gray,
-									borderRadius: 20,
+									borderRadius: 15,
 								}}></View>
 
 							<View
 								style={{
-									height: 40,
+									height: 35,
 									aspectRatio: 1,
 									backgroundColor: COLORS.gray,
-									borderRadius: 20,
+									borderRadius: 15,
 								}}></View>
 
 							<View
 								style={{
-									height: 40,
+									height: 35,
 									aspectRatio: 1,
 									backgroundColor: COLORS.gray,
-									borderRadius: 20,
+									borderRadius: 15,
 								}}></View>
 						</BlurView>
 					</View>
@@ -185,9 +185,9 @@ const styles = StyleSheet.create({
 		borderRadius: 45 / 2,
 	},
 	blurContainer: {
-		height: 75,
-		width: 75,
-		borderRadius: 75 / 2,
+		height: 60,
+		width: 60,
+		borderRadius: 30,
 		textAlign: "center",
 		justifyContent: "center",
 		alignItems: "center",

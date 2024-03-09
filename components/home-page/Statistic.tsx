@@ -48,7 +48,7 @@ export const Statistic = () => {
 				<View
 					style={{
 						flexShrink: 1,
-						paddingHorizontal: 16,
+						paddingHorizontal: 8,
 						height: "100%",
 						borderRadius: 25,
 						backgroundColor: COLORS.light,
@@ -57,7 +57,7 @@ export const Statistic = () => {
 						alignItems: "center",
 						gap: 8,
 					}}>
-					<Text>📈 Growth: 15%</Text>
+					<Text style={{ fontSize: 10 }}>📈 Growth: 15%</Text>
 				</View>
 
 				<View
@@ -71,10 +71,10 @@ export const Statistic = () => {
 						alignItems: "center",
 						gap: 8,
 					}}>
-					<Text>🏆 Best Result: 5/6 Tasks</Text>
+					<Text style={{ fontSize: 10 }}>🏆 Best Result: 5/6 Tasks</Text>
 				</View>
 
-				<View
+				<Pressable
 					style={{
 						height: "100%",
 						aspectRatio: 1,
@@ -84,7 +84,7 @@ export const Statistic = () => {
 						alignItems: "center",
 					}}>
 					<FeIcon name="arrow-up-right" size={20} color={COLORS.dark} />
-				</View>
+				</Pressable>
 			</View>
 		</View>
 	);
