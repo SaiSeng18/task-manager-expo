@@ -6,6 +6,8 @@ import { CurrentTask } from "@/components/home-page/CurrentTask";
 import { PreviewTask } from "@/components/home-page/PreviewTask";
 import { CommunityBlog } from "@/components/home-page/CommunityBlog";
 import { Statistic } from "@/components/home-page/Statistic";
+import { SharedStatus } from "@/components/home-page/SharedStatus";
+import { Progress } from "@/components/home-page/Progress";
 
 export default function Page() {
 	return (
@@ -25,6 +27,10 @@ export default function Page() {
 				<CommunityBlog />
 
 				<Statistic />
+
+				<SharedStatus />
+
+				<Progress />
 
 				<Link href="/tasks">Tasks</Link>
 			</View>

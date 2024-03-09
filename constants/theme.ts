@@ -6,6 +6,7 @@ const COLORS = {
 	gray: "#eaeaea",
 	lime: "#cfe9bf",
 	lightYellow: "#ffeba8",
+	cyan: "#b8e7ef",
 };
 
 const SPACING = {
