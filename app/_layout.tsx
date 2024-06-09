@@ -1,9 +1,9 @@
 import React from "react";
-import { Slot } from "expo-router";
-import { SafeAreaView, StyleSheet } from "react-native";
+import { Slot, Stack } from "expo-router";
+import { StyleSheet } from "react-native";
 import { COLORS } from "@/constants/theme";
-import { Navbar } from "@/components/Navbar";
 import { useFonts } from "expo-font";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const RootLayout = () => {
 	const [fontsLoaded] = useFonts({
@@ -15,18 +15,14 @@ const RootLayout = () => {
 	}
 
 	return (
-		<SafeAreaView style={styles.container}>
-			<Slot />
-			<Navbar />
+		<SafeAreaView style={{ flex: 1 }}>
+			<Stack>
+				<Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+
+				{/* <Stack.Screen name="+not-found" /> */}
+			</Stack>
 		</SafeAreaView>
 	);
 };
-
-const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		backgroundColor: COLORS.dark,
-	},
-});
 
 export default RootLayout;

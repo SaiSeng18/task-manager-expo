@@ -13,8 +13,6 @@ export default function Page() {
 	return (
 		<ScrollView
 			style={{
-				flex: 1,
-				marginTop: StatusBar.currentHeight,
 				backgroundColor: COLORS.dark,
 			}}>
 			<View style={styles.container}>
@@ -40,8 +38,6 @@ export default function Page() {
 
 const styles = StyleSheet.create({
 	container: {
-		flex: 1,
-		height: "100%",
 		alignItems: "center",
 		padding: SPACING.small,
 		gap: SPACING.small,
